@@ -10,7 +10,7 @@ export function App() {
       <form className='w-full'>
         <input 
           type="text" 
-          placeholder='search in your notes...' 
+          placeholder='search your notes...' 
           className='w-full bg-transparent text-3xl font-semibold tracking-tight outline-none placeholder:text-slate-500 '
         />
       </form>
@@ -20,11 +20,15 @@ export function App() {
       <div className='grid grid-cols-3 gap-6 auto-rows-[250px]'>
         <NewNoteCard />
 
-        <NoteCard />
+        <NoteCard note={{ 
+          date: new Date,
+          content: 'test...'}} 
+        />
 
-        <NoteCard />
-
-        <NoteCard />
+        <NoteCard note={{ 
+          date: new Date(2024, 2, 1),
+          content: 'test 123...'
+        }} />
 
       </div>
 
